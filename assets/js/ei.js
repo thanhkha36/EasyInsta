@@ -1,7 +1,10 @@
 function removeEle(elem){
     if (elem){
         var elements = document.getElementsByClassName(elem);
-        while (elements.length > 0) elements[0].parentNode.removeChild(elements[0]);
+        for(var i = 0; i < elements.length; i++){
+            if(elements[i].style.display != "none")
+                elements[i].style.display = "none";
+        }
     }
 }
 
@@ -11,3 +14,9 @@ function initEI(){
 }
 
 window.onscroll = function(){ initEI(); };
+window.onclick = function(){ initEI(); };
+window.ondblclick = function(){ 
+    setTimeout(function(){
+        initEI();
+    }, 500)
+};
