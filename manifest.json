@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Easy Instagram",
+  "description": "Take back your right-click.",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "https://instagram.com/*",
+    "https://*.instagram.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://instagram.com/*", "https://*.instagram.com/*"],
+      "js": [
+        "assets/js/ei.js"
+      ]
+    }
+  ]
+}
