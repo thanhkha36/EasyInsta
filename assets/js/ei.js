@@ -11,6 +11,8 @@ function removeEle(elem){
 function initEI(){
     removeEle("_si7dy");
     removeEle("_rcw2i");
+    removeEle("_o95x1");
+    removeEle("_4c5eh");
 }
 
 window.onload = function(){ initEI(); };
