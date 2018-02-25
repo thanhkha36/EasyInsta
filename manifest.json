@@ -22,7 +22,7 @@
     {
       "matches": ["https://instagram.com/*", "https://*.instagram.com/*"],
       "js": [
-        "assets/js/ei.js"
+        "assets/js/ei.min.js"
       ]
     }
   ]

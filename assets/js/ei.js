@@ -13,6 +13,7 @@ function initEI(){
     removeEle("_rcw2i");
 }
 
+window.onload = function(){ initEI(); };
 window.onscroll = function(){ initEI(); };
 window.onclick = function(){ initEI(); };
 window.ondblclick = function(){ 
