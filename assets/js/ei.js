@@ -8,18 +8,29 @@ function removeEle(elem){
     }
 }
 
-function initEI(){
+function avatarFS(e){
+    if(e && e.target && e.target.className == '_rewi8'){
+        var avatarURL = e.srcElement.currentSrc.replace('/vp/', '/').replace('s150x150', 's1080x1080');
+        window.open(avatarURL,'_blank');
+    }
+}
+
+function rClickPlease(){
     removeEle("_si7dy");
     removeEle("_rcw2i");
     removeEle("_o95x1");
     removeEle("_4c5eh");
 }
 
-window.onload = function(){ initEI(); };
-window.onscroll = function(){ initEI(); };
-window.onclick = function(){ initEI(); };
+document.body.addEventListener("click", function(e) {
+    avatarFS(e);
+}, false);
+
+window.onload = function(){ rClickPlease(); };
+window.onscroll = function(){ rClickPlease(); };
+window.onclick = function(){ rClickPlease(); };
 window.ondblclick = function(){ 
     setTimeout(function(){
-        initEI();
+        rClickPlease();
     }, 500)
 };
