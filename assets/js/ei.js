@@ -20,6 +20,10 @@ function rClickPlease(){
     removeEle("_rcw2i");
     removeEle("_o95x1");
     removeEle("_4c5eh");
+
+    setTimeout(function(){
+        rClickPlease();
+    }, 300)
 }
 
 document.body.addEventListener("click", function(e) {
